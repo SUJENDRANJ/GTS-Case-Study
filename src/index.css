@@ -3,7 +3,6 @@ body {
 }
 
 .alertBorder {
-  /* border: 1px solid; */
   animation: blink 1s;
   animation-iteration-count: 1;
 

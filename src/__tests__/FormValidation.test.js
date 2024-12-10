@@ -1,10 +1,10 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom"; // Provides routing context for the component
-import CreateAgreement from "../CreateAgreement"; // Component under test
+import CreateAgreement from "../components/CreateAgreement"; // Component under test
 import "@testing-library/jest-dom";
 
 // Mock useEmployee hook and setEmployeeData function
-jest.mock("../../contexts/Context", () => ({
+jest.mock("../contexts/Context", () => ({
   useEmployee: () => ({
     employeeData: [],
     setEmployeeData: jest.fn(),

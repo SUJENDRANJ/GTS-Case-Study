@@ -1,8 +1,8 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import { Context } from "../../contexts/Context";
-import Dashboard from "../Dashboard";
+import { Context } from "../contexts/Context";
+import Dashboard from "../components/Dashboard";
 import "@testing-library/jest-dom";
-import MOCK_DATA from "../mocks/mockEmployeeData.json";
+import MOCK_DATA from "../components/mocks/mockEmployeeData.json";
 import { BrowserRouter } from "react-router-dom";
 
 // Mock fetch to simulate API response

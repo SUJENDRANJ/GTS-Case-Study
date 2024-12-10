@@ -14,7 +14,7 @@ function App() {
     <>
       {/* Wrapping the application in BrowserRouter to enable routing */}
       <BrowserRouter>
-        {/* Header component visible at routes */}
+        {/* Header component visible at all routes */}
         <Header />
         {/* Defining Routes */}
         <Routes>

@@ -6,12 +6,10 @@ import { Context } from "./contexts/Context"; // Context provider for global sta
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {" "}
     {/* Wrap app in StrictMode for development checks */}
     <Context>
-      {" "}
       {/* Provide the global context to the entire app */}
-      <App /> {/* Main application component */}
+      <App />
     </Context>
   </StrictMode>
 );

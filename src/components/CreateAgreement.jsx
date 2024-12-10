@@ -4,7 +4,6 @@ import { useNavigate, Link } from "react-router-dom";
 import { useEmployee } from "../contexts/Context";
 
 const CreateAgreement = () => {
-  // State to add new employee agreement
   const [addedEmployee, setAddedEmployee] = useState({
     name: "",
     department: "",
@@ -12,59 +11,51 @@ const CreateAgreement = () => {
     agreementDate: "",
     imgURL: "",
   });
-
-  // State for validation messages
   const [validateForm, setValidateForm] = useState("");
-
   const { employeeData, setEmployeeData } = useEmployee();
-
-  // Hook to navigate routes from the component
   const navigate = useNavigate();
 
-  // Handles form submission for creating a new agreement
+  // Handle form submission
   function handleSubmit() {
-    // Validate that all fields are filled or not
+    // Validate if all required fields are filled
     if (
       addedEmployee.name &&
       addedEmployee.department &&
       addedEmployee.position &&
       addedEmployee.agreementDate
     ) {
-      // Make POST request
+      // Post the data to the server
       fetch("http://localhost:3000/employee", {
         method: "POST",
         headers: { "Content-Type": "application/json; charset=UTF-8" },
-        body: JSON.stringify(addedEmployee), // Convert employee data to JSON format
+        body: JSON.stringify(addedEmployee),
       })
         .then((res) => res.json())
         .then((data) => {
           setEmployeeData([...employeeData, data]);
-          navigate("/"); // Redirect to the dashboard upon success
-          alert("✔ Successfully Added Employee"); // Notify the user
+          navigate("/"); // Redirect to dashboard
+          alert("✔ Successfully Added Employee");
         });
     } else {
-      // Display validation error if fields are missing
       setValidateForm("*All fields instead of image are required");
     }
   }
 
+  // Handle image file change
   const handleFileChange = (e) => {
     const file = URL.createObjectURL(e.target.files[0]);
     if (file) {
       setAddedEmployee({ ...addedEmployee, imgURL: file });
-    } else return;
+    }
   };
 
   return (
     <Container className="mt-5">
       <h2>Add Employee Agreement</h2>
-
-      {/* Validation Message */}
       <span className="text-danger">{validateForm}</span>
 
-      {/* Form for adding an employee agreement */}
       <Form>
-        {/* Employee Name Field */}
+        {/* Employee Name */}
         <Form.Group className="mb-3" controlId="employeeName">
           <Form.Label>Employee Name</Form.Label>
           <Form.Control
@@ -77,7 +68,7 @@ const CreateAgreement = () => {
           />
         </Form.Group>
 
-        {/* Department Field */}
+        {/* Department */}
         <Form.Group className="mb-3" controlId="department">
           <Form.Label>Department</Form.Label>
           <Form.Control
@@ -90,7 +81,7 @@ const CreateAgreement = () => {
           />
         </Form.Group>
 
-        {/* Position Field */}
+        {/* Position */}
         <Form.Group className="mb-3" controlId="position">
           <Form.Label>Position</Form.Label>
           <Form.Control
@@ -103,7 +94,7 @@ const CreateAgreement = () => {
           />
         </Form.Group>
 
-        {/* Agreement Date Field */}
+        {/* Agreement Date */}
         <Form.Group className="mb-3" controlId="agreementDate">
           <Form.Label>Agreement Date</Form.Label>
           <Form.Control
@@ -118,7 +109,7 @@ const CreateAgreement = () => {
           />
         </Form.Group>
 
-        {/* Add image */}
+        {/* Image Upload */}
         <Form.Group controlId="formFile" className="mb-3">
           <Form.Label>Choose an Image File</Form.Label>
           <Form.Control type="file" onChange={(e) => handleFileChange(e)} />
@@ -129,7 +120,7 @@ const CreateAgreement = () => {
           Add Agreement
         </Button>
 
-        {/* Back Button to return to dashboard */}
+        {/* Back Button */}
         <Link to="/">
           <Button variant="secondary" className="ms-4">
             Back

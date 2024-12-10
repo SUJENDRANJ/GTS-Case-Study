@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { Context, useEmployee } from "../../contexts/Context";
-import MOCK_DATA from "../mocks/mockEmployeeData.json";
+import { Context, useEmployee } from "../contexts/Context";
+import MOCK_DATA from "../components/mocks/mockEmployeeData.json";
 
 // Mock API call
 global.fetch = jest.fn(() =>

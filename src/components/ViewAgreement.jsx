@@ -4,38 +4,33 @@ import { useContext } from "react";
 import { useEmployee } from "../contexts/Context";
 
 const ViewAgreement = () => {
-  // Accessing employee data and the setter function by Context
-  const { employeeData, setEmployeeData } = useEmployee();
+  const { employeeData, setEmployeeData } = useEmployee(); // Access employee data from context
+  const { empId } = useParams(); // Extract employee ID from URL parameters
+  const navigate = useNavigate(); // React Router's navigate function for redirection
 
-  // Extracting employee ID from URL parameters
-  const { empId } = useParams();
+  const currentEmployee = employeeData.find(({ id }) => id === empId); // Fetch the current employee's details
 
-  // React Router's navigate function to redirect
-  const navigate = useNavigate();
-
-  // Fetching the current employee's details using empId
-  const currentEmployee = employeeData.find(({ id }) => id === empId);
-
-  // Function to handle deletion of the agreement
+  // Function to handle deletion of the employee agreement
   function handleDelete() {
     const confirmDel = confirm("⚠ Confirm to Delete Agreement");
 
     if (confirmDel) {
-      const filteredEmp = employeeData.filter((emp) => emp.id !== empId);
+      const filteredEmp = employeeData.filter((emp) => emp.id !== empId); // Filter out the deleted employee
 
+      // Send DELETE request to remove employee data
       fetch("http://localhost:3000/employee/" + empId, {
         method: "DELETE",
       })
         .then((res) => res.json())
-        .then((data) => {
+        .then(() => {
           alert("✔ Deleted Employee Successfully");
-          navigate("/"); // Redirecting to Dashboard after deletion
-          setEmployeeData(filteredEmp); // Updating state with filtered data
+          navigate("/"); // Redirect to Dashboard after deletion
+          setEmployeeData(filteredEmp); // Update the state with remaining employee data
         })
         .catch((err) => {
           console.error(err.message);
-          navigate("/");
-          alert("❗ Cannot Delete the Agreement - " + err.message);
+          navigate("/"); // Navigate back to Dashboard if error occurs
+          alert("❗ Cannot Delete the Agreement - " + err.message); // Show error alert
         });
     }
   }
@@ -43,7 +38,7 @@ const ViewAgreement = () => {
   return (
     <Container className="mt-5">
       {/* Page Header */}
-      <h2 className="text-center  mb-4 fs-1">Agreement Details</h2>
+      <h2 className="text-center mb-4 fs-1">Agreement Details</h2>
 
       {/* Agreement Card */}
       <Card className="shadow-lg border-0">
@@ -52,7 +47,7 @@ const ViewAgreement = () => {
         </Card.Header>
         <Card.Body>
           <Row>
-            {/* Displaying employee details */}
+            {/* Display employee details */}
             <Col md={6} className="ms-5">
               <h5 className="text-danger mt-2 fs-2 mb-3">
                 Agreement for {currentEmployee.name.toUpperCase()}
@@ -68,7 +63,7 @@ const ViewAgreement = () => {
                 {currentEmployee.agreementDate}
               </p>
             </Col>
-            {/* Placeholder image for employee */}
+            {/* Employee's image */}
             <Col className="ms-5">
               <img
                 src={
