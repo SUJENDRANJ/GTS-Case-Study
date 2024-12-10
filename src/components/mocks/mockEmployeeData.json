@@ -1,0 +1,18 @@
+[
+  {
+    "id": "0876",
+    "name": "John Doe",
+    "department": "Engineering",
+    "position": "Developer",
+    "agreementDate": "2024-12-25",
+    "imgURL": ""
+  },
+  {
+    "id": "1234",
+    "name": "Jane Smith",
+    "department": "HR",
+    "position": "Manager",
+    "agreementDate": "2024-12-18",
+    "imgURL": ""
+  }
+]

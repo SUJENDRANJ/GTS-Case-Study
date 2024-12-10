@@ -1,0 +1,35 @@
+{
+  "name": "parcel",
+  "version": "1.0.0",
+  "description": "# Employee Agreement Management System",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "jest",
+    "watch-test": "jest --watchAll",
+    "server": "json-server --watch server/data.json --port 3000"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^16.1.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "parcel": "^2.13.2",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "json-server": "^1.0.0-beta.3",
+    "react": "^19.0.0",
+    "react-bootstrap": "^2.10.6",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^6.28.0",
+    "react-spinners": "^0.15.0"
+  }
+}
