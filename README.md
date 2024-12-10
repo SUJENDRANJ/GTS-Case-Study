@@ -18,7 +18,16 @@ A React-based system to manage employee agreements. It allows users to view, cre
 
 ## Setup Instructions
 
-### Clone the repository
+### Install dependencies
+- npm install (or) npm i
+
+### Run the app
+- npm start
+
+### Run the mock API server (JSON Server)
+- npm test
+
+### Clone the repository◘
 ```bash
 git clone https://github.com/SUJENDRANJ/GTS-CaseStudy.git
 
