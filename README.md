@@ -28,12 +28,12 @@ You need to have **Node.js** installed on your system. You can download and inst
 ### Steps to Install and Run the Application
 1. **Clone the repository**
     ```bash
-    git clone https://github.com/SUJENDRANJ/GTS-CaseStudy.git
+    git clone https://github.com/SUJENDRANJ/gts-case-study.git
     ```
 
 2. **Navigate to the project directory**
     ```bash
-    cd GTS-CaseStudy
+    cd gts-case-study
     ```
 
 3. **Install dependencies**
