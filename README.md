@@ -3,7 +3,9 @@
 ## Project Overview
 The **Employee Agreement Management System** is a web application built using React that allows businesses to manage employee agreements. The application enables users to view, create, and delete employee agreements, all while storing employee data globally using React Context API.
 
-![Screenshot (180)](https://github.com/user-attachments/assets/b44c8d09-3712-4f1b-9995-46d50bccea47)
+![del](https://github.com/user-attachments/assets/4ba958b0-fdf0-4773-b8a5-9c15cbbc6c9d)
+
+
 
 ## Key Features
 - **View Employee Agreements**: Display details of employee agreements.
@@ -73,15 +75,16 @@ You need to have **Node.js** installed on your system. You can download and inst
 
 1. **Dashboard**: Displays a list of employee agreements. It fetches employee data from the mock API.
 
-![Screenshot (176)](https://github.com/user-attachments/assets/479243f7-fa00-4d93-8708-d942af9394c0)
+![dash](https://github.com/user-attachments/assets/8dff654e-0525-4b2d-a226-1cf124181d22)
+
   
 2. **Create Agreement**: A form to add a new employee agreement, including fields for employee name, department, position, and agreement date.
 
-![Screenshot (184)](https://github.com/user-attachments/assets/02ddccb4-8dd3-4391-a3bd-6a7becb92a88)
- 
-3. **View Agreement**: Displays details of a specific employee's agreement. Users can also delete the agreement from this view.
+![add](https://github.com/user-attachments/assets/78db9bfb-6fca-46c4-94aa-b5a70c5bb853)
 
-![Screenshot (186)](https://github.com/user-attachments/assets/821c9536-1271-492c-89f9-ef52049883a8)
+3. **View Agreement**: Displays details of a specific employee's agreement. Users can also delete the agreement from this view.
+   
+![view](https://github.com/user-attachments/assets/e0baa44c-f783-4276-87ad-b45016a6877d)
 
 ## Testing
 The application uses **Jest** and **React Testing Library** for unit and integration testing.
