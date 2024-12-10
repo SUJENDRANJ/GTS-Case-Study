@@ -1,7 +1,7 @@
 # Employee Agreement Management System
 
 ## Description
-A React-based system to manage employee agreements. It allows users to view, create, and delete agreements, with employee data stored and managed globally using React Context API.
+A React Application to manage employee agreements. It allows users to view, create, and delete agreements, with employee data stored and managed globally using React Context API.
 
 ## Features
 - View employee agreements
