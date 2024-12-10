@@ -5,8 +5,6 @@ The **Employee Agreement Management System** is a web application built using Re
 
 ![del](https://github.com/user-attachments/assets/4ba958b0-fdf0-4773-b8a5-9c15cbbc6c9d)
 
-
-
 ## Key Features
 - **View Employee Agreements**: Display details of employee agreements.
 - **Create Employee Agreements**: Add new employee agreements by providing necessary details.
@@ -87,7 +85,7 @@ You need to have **Node.js** installed on your system. You can download and inst
 ![view](https://github.com/user-attachments/assets/e0baa44c-f783-4276-87ad-b45016a6877d)
 
 ## Testing
-The application uses **Jest** and **React Testing Library** for unit and integration testing.
+The application uses **Jest** and **React Testing Library** for unit testing.
 
 ### Test Coverage
 - **Component Tests**: Tests for each UI component (like Header, Dashboard, etc.) are written to check if they render correctly and display appropriate content.
