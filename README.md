@@ -27,7 +27,7 @@ A React Application to manage employee agreements. It allows users to view, crea
 ### Run the mock API server (JSON Server)
 - npm test
 
-### Clone the repository◘
+### Clone the repository
 ```bash
 git clone https://github.com/SUJENDRANJ/GTS-CaseStudy.git
 
